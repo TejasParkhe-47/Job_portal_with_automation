@@ -59,7 +59,7 @@ const Footer = () => {
             <h4 className="text-xl font-bold mb-3">Follow Us</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to={"/"} className="flex items-center hover:text-blue-400 transition-colors">
+                <Link to={"#"} className="flex items-center hover:text-blue-400 transition-colors">
                   <span className="text-2xl mr-2">
                     <FaSquareXTwitter />
                   </span>
@@ -67,7 +67,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={"/"} className="flex items-center hover:text-blue-400 transition-colors">
+                <Link to={"#"} className="flex items-center hover:text-blue-400 transition-colors">
                   <span className="text-2xl mr-2">
                     <FaSquareInstagram />
                   </span>
@@ -75,7 +75,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={"/"} className="flex items-center hover:text-blue-400 transition-colors">
+                <Link to={"#"} className="flex items-center hover:text-blue-400 transition-colors">
                   <span className="text-2xl mr-2">
                     <FaYoutube />
                   </span>
@@ -83,7 +83,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={"/"} className="flex items-center hover:text-blue-400 transition-colors">
+                <Link to={"#"} className="flex items-center hover:text-blue-400 transition-colors">
                   <span className="text-2xl mr-2">
                     <FaLinkedin />
                   </span>
@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="bg-gray-900 text-gray-400 text-center py-4">
-        &copy; 2024. All Rights Reserved By Tejas Rupali Krushna Parkhe
+        &copy; 2025. All Rights Reserved By Tejas Parkhe
       </div>
     </>
   );

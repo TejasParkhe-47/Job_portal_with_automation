@@ -11,19 +11,19 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <div className="mb-8 bg-blue-400/10 px-6 py-2 rounded-full border border-blue-400/30">
             <span className="text-sm font-semibold text-blue-400 tracking-wide">
-              TRUSTED BY FORTUNE 500 COMPANIES
+              TRUSTED BY FORTUNE COMPANIES
             </span>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Transform Your Career with
             <span className="block mt-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              AI-Driven Precision
+              Automated Email facility
             </span>
           </h1>
 
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            Advanced machine learning algorithms matching top talent with
+            Advanced Automated Email sending matching top talent with
             ideal opportunities in real-time across global markets.
           </p>
 
