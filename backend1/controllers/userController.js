@@ -57,7 +57,7 @@ export const register=catchAsyncErrors(async(req,res,next)=>{
                   const cloudinaryResponse = await cloudinary.uploader.upload(
                     resume.tempFilePath,
                     
-                    {resource_type: "raw", folder: "Job_Seekers_Resume" }
+                    { folder: "Job_Seekers_Resume" }
                     
                   );
                   if (!cloudinaryResponse || cloudinaryResponse.error) {
