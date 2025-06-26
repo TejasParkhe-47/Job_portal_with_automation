@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const BASE_URL = import.meta.env.VITE_BACKEND;
+
 const userSlice = createSlice({
   name: "user",
   initialState: {
@@ -92,7 +94,7 @@ export const register = (data) => async (dispatch) => {
   dispatch(userSlice.actions.registerRequest());
   try {
     const response = await axios.post(
-      "http://localhost:4000/api/v1/user/register",
+      `${BASE_URL}/api/v1/user/register`,
       data,
       {
         withCredentials: true,
@@ -110,7 +112,7 @@ export const login = (data) => async (dispatch) => {
   dispatch(userSlice.actions.loginRequest());
   try {
     const response = await axios.post(
-      "http://localhost:4000/api/v1/user/login",
+      `${BASE_URL}/api/v1/user/login`,
       data,
       {
         withCredentials: true,
@@ -128,7 +130,7 @@ export const getUser = () => async (dispatch) => {
   dispatch(userSlice.actions.fetchUserRequest());
   try {
     const response = await axios.get(
-      "http://localhost:4000/api/v1/user/getuser",
+      `${BASE_URL}/api/v1/user/getuser`,
       {
         withCredentials: true,
       }
@@ -142,7 +144,7 @@ export const getUser = () => async (dispatch) => {
 export const logout = () => async (dispatch) => {
   try {
     const response = await axios.get(
-      "http://localhost:4000/api/v1/user/logout",
+      `${BASE_URL}/api/v1/user/logout`,
       {
         withCredentials: true,
       }

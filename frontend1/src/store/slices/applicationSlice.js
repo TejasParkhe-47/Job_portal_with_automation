@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+
+const BASE_URL = import.meta.env.VITE_BACKEND;
 const applicationSlice = createSlice({
   name: "applications",
   initialState: {
@@ -84,7 +86,7 @@ export const fetchEmployerApplications = () => async (dispatch) => {
   dispatch(applicationSlice.actions.requestForAllApplications());
   try {
     const response = await axios.get(
-      `http://localhost:4000/api/v1/application/employer/getall`,
+      `${BASE_URL}/api/v1/application/employer/getall`,
       {
         withCredentials: true,
       }
@@ -108,7 +110,7 @@ export const fetchJobSeekerApplications = () => async (dispatch) => {
   dispatch(applicationSlice.actions.requestForMyApplications());
   try {
     const response = await axios.get(
-      `http://localhost:4000/api/v1/application/jobseeker/getall`,
+      `${BASE_URL}/api/v1/application/jobseeker/getall`,
       {
         withCredentials: true,
       }
@@ -132,7 +134,7 @@ export const postApplication = (data, jobId) => async (dispatch) => {
   dispatch(applicationSlice.actions.requestForPostApplication());
   try {
     const response = await axios.post(
-      `http://localhost:4000/api/v1/application/post/${jobId}`,
+      `${BASE_URL}/api/v1/application/post/${jobId}`,
       data,
       {
         withCredentials: true,
@@ -156,7 +158,7 @@ export const deleteApplication = (id) => async (dispatch) => {
   dispatch(applicationSlice.actions.requestForDeleteApplication());
   try {
     const response = await axios.delete(
-      `http://localhost:4000/api/v1/application/delete/${id}`,
+      `${BASE_URL}/api/v1/application/delete/${id}`,
       { withCredentials: true }
     );
     dispatch(

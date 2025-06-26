@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
+const BASE_URL = import.meta.env.VITE_BACKEND;
 const updateProfileSlice = createSlice({
   name: "updateProfile",
   initialState: {
@@ -47,7 +47,7 @@ export const updateProfile = (data) => async (dispatch) => {
   dispatch(updateProfileSlice.actions.updateProfileRequest());
   try {
     const response = await axios.put(
-      "http://localhost:4000/api/v1/user/update/profile",
+      `${BASE_URL}/api/v1/user/update/profile`,
       data,
       {
         withCredentials: true,
@@ -68,7 +68,7 @@ export const updatePassword = (data) => async (dispatch) => {
   console.log("mememem")
   try {
     const response = await axios.put(
-      "http://localhost:4000/api/v1/user/update/password",
+      `${BASE_URL}/api/v1/user/update/password`,
       data,
       {
         withCredentials: true,
