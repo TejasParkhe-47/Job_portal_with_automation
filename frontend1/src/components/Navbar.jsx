@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
        
         <div className="flex items-center space-x-3">
-          <img src="../vite.svg" alt="logo" className="h-10 w-10" />
+          <img src="../job-portal.png" alt="logo" className="h-10 w-10" />
           <h1 className="text-xl font-semibold text-gray-900">NextHire</h1>
         </div>
 
